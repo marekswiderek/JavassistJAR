@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" prefHeight="699.0" prefWidth="1365.0" style="-fx-border-color: black;" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane prefHeight="702.0" prefWidth="1372.0" style="-fx-border-color: black;">
+         <children>
+            <AnchorPane layoutY="-7.0" prefHeight="706.0" prefWidth="753.0">
+               <children>
+                  <TreeView fx:id="tree" layoutY="7.0" prefHeight="699.0" prefWidth="753.0" style="-fx-border-color: black;" />
+               </children>
+            </AnchorPane>
+            <Button fx:id="browseButton" layoutX="771.0" layoutY="15.0" mnemonicParsing="false" onAction="#browseJar" prefHeight="40.0" prefWidth="200.0" text="Browse JAR" />
+            <Button fx:id="loadButton" layoutX="771.0" layoutY="63.0" mnemonicParsing="false" onAction="#loadJar" prefHeight="40.0" prefWidth="200.0" text="LOAD JAR " />
+            <Button fx:id="addPackageButton" layoutX="757.0" layoutY="147.0" mnemonicParsing="false" onAction="#addPackage" prefHeight="30.0" prefWidth="150.0" text="Add Package" />
+            <Button fx:id="addClassButton" layoutX="757.0" layoutY="182.0" mnemonicParsing="false" onAction="#addClass" prefHeight="30.0" prefWidth="150.0" text="Add Class" />
+            <Button fx:id="addMethodButton" layoutX="758.0" layoutY="254.0" mnemonicParsing="false" onAction="#addMethod" prefHeight="30.0" prefWidth="150.0" text="Add Method" />
+            <Button fx:id="addConstructorButton" layoutX="758.0" layoutY="289.0" mnemonicParsing="false" onAction="#addConstructor" prefHeight="30.0" prefWidth="150.0" text="Add Constructor" />
+            <Button fx:id="addFieldButton" layoutX="758.0" layoutY="324.0" mnemonicParsing="false" onAction="#addField" prefHeight="30.0" prefWidth="150.0" text="Add Field" />
+            <Button layoutX="916.0" layoutY="147.0" mnemonicParsing="false" onAction="#removePackage" prefHeight="30.0" prefWidth="150.0" text="Remove Package" />
+            <Button fx:id="removeClassButton" layoutX="916.0" layoutY="182.0" mnemonicParsing="false" onAction="#removeClass" prefHeight="30.0" prefWidth="150.0" text="Remove Class" />
+            <Button layoutX="917.0" layoutY="254.0" mnemonicParsing="false" onAction="#removeMethod" prefHeight="30.0" prefWidth="150.0" text="Remove Method" />
+            <Button layoutX="917.0" layoutY="289.0" mnemonicParsing="false" onAction="#removeConstructor" prefHeight="30.0" prefWidth="150.0" text="Remove Constructor" />
+            <Button layoutX="917.0" layoutY="324.0" mnemonicParsing="false" onAction="#removeField" prefHeight="30.0" prefWidth="150.0" text="Remove Field" />
+            <TextArea fx:id="text" layoutX="754.0" layoutY="380.0" prefHeight="200.0" prefWidth="607.0" style="-fx-border-color: black;" />
+            <Button layoutX="1215.0" layoutY="289.0" mnemonicParsing="false" onAction="#overwriteMethodBody" prefHeight="30.0" prefWidth="120.0" text="OverwriteMethodBody">
+               <font>
+                  <Font size="10.0" />
+               </font></Button>
+            <Button layoutX="1075.0" layoutY="289.0" mnemonicParsing="false" onAction="#overwriteConstructorBody" prefHeight="30.0" prefWidth="134.0" text="OverwriteConstructorBody">
+               <font>
+                  <Font size="10.0" />
+               </font></Button>
+            <Button layoutX="1075.0" layoutY="254.0" mnemonicParsing="false" onAction="#insertIntoMethodBegin" prefHeight="30.0" prefWidth="120.0" text="InsertIntoMethodBegin">
+               <font>
+                  <Font size="10.0" />
+               </font></Button>
+            <Button layoutX="1203.0" layoutY="254.0" mnemonicParsing="false" onAction="#insertIntoMethodEnd" prefHeight="30.0" prefWidth="120.0" text="InsertIntoMethodEnd">
+               <font>
+                  <Font size="10.0" />
+               </font></Button>
+            <Button layoutX="757.0" layoutY="218.0" mnemonicParsing="false" onAction="#addInterface" prefHeight="30.0" prefWidth="150.0" text="Add Interface" />
+            <Button layoutX="950.0" layoutY="609.0" mnemonicParsing="false" onAction="#exportJAR" prefHeight="50.0" prefWidth="230.0" text="EXPORT JAR" />
+            <Button layoutX="916.0" layoutY="218.0" mnemonicParsing="false" onAction="#removeInterface" prefHeight="30.0" prefWidth="150.0" text="Remove Interface" />
+         </children>
+      </Pane>
+   </children>
+</GridPane>
