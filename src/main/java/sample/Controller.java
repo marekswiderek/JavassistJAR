@@ -59,7 +59,8 @@ public class Controller {
             Main.getClassPool().makePackage(new ClassLoader() {
             },text.getText());
         } catch (CannotCompileException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Adding package error.");
         }
         Main.makeBranch(text.getText(),tree.getRoot());
     }
@@ -76,7 +77,8 @@ public class Controller {
             }
             packageNode.getParent().getChildren().removeAll(packageNode);
         } catch (NotFoundException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Choose a package!");
         }
 
     }
@@ -93,11 +95,14 @@ public class Controller {
                 Main.getCtClasses().add(newClass);
             } else System.out.println("This class already exists.");
         } catch (NotFoundException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Adding class error.");
         } catch (IOException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Class I/O error.");
         } catch (CannotCompileException e) {
-            e.printStackTrace();
+            System.out.println("Cannot compile class.");
+//            e.printStackTrace();
         }
 
     }
@@ -111,7 +116,8 @@ public class Controller {
             (((TreeItem<String>) tree.getSelectionModel().getSelectedItem()).getParent()).getChildren().remove(((TreeItem<String>) tree.getSelectionModel().getSelectedItem()));
 
         } catch (NotFoundException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Choose a class!");
         }
     }
 
@@ -124,11 +130,14 @@ public class Controller {
             newInterface.writeFile();
             newInterface.defrost();
         } catch (NotFoundException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Adding interface error.");
         } catch (IOException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Interface I/O error.");
         } catch (CannotCompileException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Cannot compile interface.");
         }
     }
 
@@ -141,7 +150,8 @@ public class Controller {
             (((TreeItem<String>) tree.getSelectionModel().getSelectedItem()).getParent()).getChildren().remove(((TreeItem<String>) tree.getSelectionModel().getSelectedItem()));
 
         } catch (NotFoundException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Choose an interface!");
         }
     }
 
@@ -155,11 +165,14 @@ public class Controller {
             classObj.defrost();
             Main.makeBranch(newMet.getName(),((TreeItem<String>) tree.getSelectionModel().getSelectedItem()));
         } catch (NotFoundException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Choose a class!");
         } catch (CannotCompileException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Compiling method error.");
         } catch (IOException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Method I/O error.");
         }
     }
 
@@ -173,11 +186,14 @@ public class Controller {
             classObj.defrost();
             (((TreeItem<String>) tree.getSelectionModel().getSelectedItem()).getParent()).getChildren().remove(((TreeItem<String>) tree.getSelectionModel().getSelectedItem()));
         } catch (NotFoundException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Choose a method!");
         } catch (CannotCompileException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Compiling method error.");
         } catch (IOException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Method I/O error.");
         }
     }
 
@@ -190,11 +206,14 @@ public class Controller {
             classObj.writeFile();
             classObj.defrost();
         } catch (CannotCompileException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Compiling method error.");
         } catch (NotFoundException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Choose a method!");
         } catch (IOException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Method I/O error.");
         }
     }
 
@@ -207,11 +226,14 @@ public class Controller {
             classObj.writeFile();
             classObj.defrost();
         } catch (CannotCompileException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Compiling method error.");
         } catch (NotFoundException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Choose a method!");
         } catch (IOException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Method I/O error.");
         }
     }
 
@@ -222,12 +244,15 @@ public class Controller {
             currentMethod.setBody(text.getText());
             classObj.writeFile();
             classObj.defrost();
-        } catch (NotFoundException e) {
-            e.printStackTrace();
         } catch (CannotCompileException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Compiling method error.");
+        } catch (NotFoundException e) {
+//            e.printStackTrace();
+            System.out.println("Choose a method!");
         } catch (IOException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Method I/O error.");
         }
 
     }
@@ -244,11 +269,14 @@ public class Controller {
                 classObj.defrost();
             } else System.out.println("Please select a class object.");
         } catch (NotFoundException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Choose a class!");
         } catch (CannotCompileException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Compiling constructor error.");
         } catch (IOException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Constructor I/O error.");
         }
     }
 
@@ -263,11 +291,14 @@ public class Controller {
             (((TreeItem<String>) tree.getSelectionModel().getSelectedItem()).getParent()).getChildren().remove(((TreeItem<String>) tree.getSelectionModel().getSelectedItem()));
 
         } catch (NotFoundException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Choose a constructor!");
         } catch (CannotCompileException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Compiling constructor error.");
         } catch (IOException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Constructor I/O error.");
         }
 
     }
@@ -281,11 +312,14 @@ public class Controller {
             classObj.writeFile();
             classObj.defrost();
         } catch (NotFoundException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Choose a constructor!");
         } catch (CannotCompileException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Compiling constructor error.");
         } catch (IOException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Constructor I/O error.");
         }
     }
 
@@ -301,12 +335,14 @@ public class Controller {
             classObj.defrost();
             Main.makeBranch(newFie.getName(),((TreeItem<String>) tree.getSelectionModel().getSelectedItem()));
         } catch (CannotCompileException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Compiling field error.");
         } catch (NotFoundException e) {
-            e.printStackTrace();
-            e.getLocalizedMessage();
+//            e.printStackTrace();
+            System.out.println("Choose a class!");
         } catch (IOException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Field I/O error!");
         }
     }
 
@@ -318,12 +354,15 @@ public class Controller {
             Main.getClassPool().get(className).writeFile();
             Main.getClassPool().get(className).defrost();
             (((TreeItem<String>) tree.getSelectionModel().getSelectedItem()).getParent()).getChildren().remove(((TreeItem<String>) tree.getSelectionModel().getSelectedItem()));
-        } catch (NotFoundException e) {
-            e.printStackTrace();
         } catch (CannotCompileException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Compiling field error.");
+        } catch (NotFoundException e) {
+//            e.printStackTrace();
+            System.out.println("Choose a field!");
         } catch (IOException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Field I/O error!");
         }
     }
 
